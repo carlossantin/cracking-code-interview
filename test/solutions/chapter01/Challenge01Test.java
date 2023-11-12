@@ -32,7 +32,7 @@ public class Challenge01Test {
 	
 	@ParameterizedTest
 	@NullAndEmptySource
-	@ValueSource(strings = {"egg", "shell", "shoes", "potato"})
+	@ValueSource(strings = {"egg", "shell", "shoes", "potato", "aeioeu"})
 	public void hasNotUniqueCharacters(String input) {
 		
 		assertFalse(this.challenge.hasAllUniqueCharacters(input));
@@ -47,7 +47,7 @@ public class Challenge01Test {
 	
 	@ParameterizedTest
 	@NullAndEmptySource
-	@ValueSource(strings = {"egg", "shell", "shoes", "potato"})
+	@ValueSource(strings = {"egg", "shell", "shoes", "potato", "aeioeu"})
 	public void hasNotUniqueCharacters_NoDataStructures(String input) {
 		
 		assertFalse(this.challenge.hasAllUniqueCharacters_NoDataStructures(input));
