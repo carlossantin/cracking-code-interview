@@ -14,10 +14,7 @@ public class Challenge03Impl implements Challenge03 {
 	@Override
 	public String URLify(String s, int size) {
 		
-		final char[] charArr = new char[s.length()];
-		for(int i = 0 ; i < charArr.length ; i++) {
-			charArr[i] = s.charAt(i);
-		}
+		final char[] charArr = s.toCharArray();
 		
 		int emptySpaces = 0;
 		for(int i = 0 ; i < size ; i++) {
