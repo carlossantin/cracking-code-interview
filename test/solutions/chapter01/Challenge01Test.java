@@ -24,7 +24,7 @@ public class Challenge01Test {
 	}
 	
 	@ParameterizedTest
-	@ValueSource(strings = {"Ada", "fangles", "tangles"})
+	@ValueSource(strings = {" ", "a", "Ada", "fangles", "tangles"})
 	public void hasUniqueCharacters(String input) {
 		
 		assertTrue(this.challenge.hasAllUniqueCharacters(input));
@@ -38,4 +38,18 @@ public class Challenge01Test {
 		assertFalse(this.challenge.hasAllUniqueCharacters(input));
 	}
 	
+	@ParameterizedTest
+	@ValueSource(strings = {" ", "a", "Ada", "fangles", "tangles"})
+	public void hasUniqueCharacters_NoDataStructures(String input) {
+		
+		assertTrue(this.challenge.hasAllUniqueCharacters_NoDataStructures(input));
+	}
+	
+	@ParameterizedTest
+	@NullAndEmptySource
+	@ValueSource(strings = {"egg", "shell", "shoes", "potato"})
+	public void hasNotUniqueCharacters_NoDataStructures(String input) {
+		
+		assertFalse(this.challenge.hasAllUniqueCharacters_NoDataStructures(input));
+	}
 }
